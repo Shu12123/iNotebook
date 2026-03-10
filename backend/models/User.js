@@ -19,4 +19,7 @@ const UserSchema = new Schema({
         default:Date.now
     }
 });
-module.exports = mongoose.model('user',UserSchema);
+// we have created this schema and now we have to use this schema as a model which is as below and so 
+// 1st arguement is user and and 2nd arguement is its name of the schema
+const User = mongoose.model('user',UserSchema);
+module.exports = User;

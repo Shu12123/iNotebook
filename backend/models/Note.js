@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
+const {Schema} = mongoose;
 
 const NotesSchema = new Schema({
+    user:{
+        // this is a way to connect a note to a particular user
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'user'
+    },
     title:{
         type: String,
         required:true
